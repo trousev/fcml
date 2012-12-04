@@ -1,0 +1,10 @@
+#ifndef FCML_H
+#define FCML_H
+
+#define FCML_PROPERTY_ASSIGN(type, name)\
+    private: type _##name;                                          \
+    public: type get##name() const { return _##name; }                       \
+    public: void set##name(const type & new##name) { _##name = new##name; }    \
+
+
+#endif // FCML_H

@@ -1,3 +1,3 @@
-INCLUDEPATH += $$fcml_root
+INCLUDEPATH += $$PWD
 HEADERS += \
-    $$fcml_root/fcml
+    $$PWD/fcml.h

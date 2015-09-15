@@ -27,8 +27,10 @@
 
 #define FCML_PROPERTY_ASSIGN(type, name)\
     private: type _##name;                                          \
-    public: virtual type get##name() const { return _##name; }                       \
-    public: virtual void set##name(const type & new##name) { _##name = new##name; }    \
+    public: virtual type name() const { return _##name; }                       \
+    public: virtual void set##_##name(const type & new##name) { _##name = new##name; }    \
 
+#define FCML_PROPERTY_GETTER(type, name, getter)\
+    public: virtual type getter() const { return name; }
 
 #endif // FCML_H
